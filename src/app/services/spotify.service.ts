@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class SpotifyService {
-  token: string = 'Bearer BQAjUHSMgVbLOKwl44NRRJ6WocU8ltL-XpuABC16CXk7VLW0b6FFCtCBQW5grVOrKKM5KzBf40zL1A5gS_Q';
+  token: string = 'Bearer BQDBQX8INTRSrPJxkNJlJ5cdvwjtkbvFC5QQMpc4uWb98w3UU6xIRyWunK9cRu9-2oO3w3SRMo5LVd8c3DA';
 
   constructor(private http: HttpClient) {
     console.log('spotify service listo');
@@ -26,8 +26,12 @@ export class SpotifyService {
     return this.getQuery('browse/new-releases?limit=20')
       .pipe(map(data => data['albums'].items));
   }
-  getArtista( termino:string ) {
+  getArtistas( termino:string ) {
     return this.getQuery(`search?q=${ termino }&type=artist&limit=15`)
       .pipe(map(data => data['artists'].items));
+  }
+  getArtista(id: string) {
+    return this.getQuery(`artists/${id}`);
+      //.pipe(map(data => data['artists'].items));
   }
 }
