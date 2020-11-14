@@ -14,6 +14,9 @@ import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HttpGetExampleComponent } from './components/http-get-example/http-get-example.component';
 
+//Pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,8 @@ import { HttpGetExampleComponent } from './components/http-get-example/http-get-
     SearchComponent,
     ArtistaComponent,
     NavbarComponent,
-    HttpGetExampleComponent
+    HttpGetExampleComponent,
+    NoimagePipe
   ],
   imports: [
     BrowserModule,
