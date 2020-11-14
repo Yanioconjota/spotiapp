@@ -16,6 +16,7 @@ import { HttpGetExampleComponent } from './components/http-get-example/http-get-
 
 //Pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
+import { TarjetasComponent } from './components/shared/tarjetas/tarjetas.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NoimagePipe } from './pipes/noimage.pipe';
     ArtistaComponent,
     NavbarComponent,
     HttpGetExampleComponent,
-    NoimagePipe
+    NoimagePipe,
+    TarjetasComponent
   ],
   imports: [
     BrowserModule,
