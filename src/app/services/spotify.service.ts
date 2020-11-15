@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class SpotifyService {
-  token: string = 'Bearer BQAm0tGZIxwNFH4vTpsKWARIfGQn2kVtwKGsdpnWZyZKN6AhJuXYDWnd02i9UilLNRMucKDISEzbhPeSP3E';
+  token: string = 'Bearer xxxxxxxxxxxxx';
 
   constructor(private http: HttpClient) {
     console.log('spotify service listo');
