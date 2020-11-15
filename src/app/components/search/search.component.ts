@@ -11,6 +11,8 @@ export class SearchComponent {
 
   artistas: any[] = [];
   loading: boolean;
+  error: boolean;
+  errorMsg: string;
 
   constructor(private spotify: SpotifyService) { }
 
@@ -23,8 +25,11 @@ export class SearchComponent {
         console.log(data);
         this.loading = false;
       },
-      (error:any)=>{
+      (errorServicio) => {
         this.loading = false;
+        this.error = true;
+        this.errorMsg = errorServicio.error.error.message;
+        console.log(this.errorMsg);
       });
   }
 

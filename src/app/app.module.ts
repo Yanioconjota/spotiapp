@@ -19,6 +19,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HttpGetExampleComponent } from './components/http-get-example/http-get-example.component';
 import { TarjetasComponent } from './components/shared/tarjetas/tarjetas.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { ErrorComponent } from './components/shared/error/error.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     NoimagePipe,
     TarjetasComponent,
     LoadingComponent,
-    DomseguroPipe
+    DomseguroPipe,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
