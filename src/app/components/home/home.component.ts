@@ -19,7 +19,10 @@ export class HomeComponent {
       console.log(data);
       this.nuevasCanciones = data;
       this.loading = false;
-    });
+    },
+      (error: any) => {
+        this.loading = false;
+      });
   }
 
 }

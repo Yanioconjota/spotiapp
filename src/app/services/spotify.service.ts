@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class SpotifyService {
-  token: string = 'Bearer BQDBQX8INTRSrPJxkNJlJ5cdvwjtkbvFC5QQMpc4uWb98w3UU6xIRyWunK9cRu9-2oO3w3SRMo5LVd8c3DA';
+  token: string = 'Bearer BQByZeieFMi9GohyqQiQ8uT_XjnzLoHctw5At0MVJ5aPzqLCYuWrPxMcsab8qx5J21zy5XXPxzvu3NvZOqk';
 
   constructor(private http: HttpClient) {
     console.log('spotify service listo');
@@ -32,6 +32,5 @@ export class SpotifyService {
   }
   getArtista(id: string) {
     return this.getQuery(`artists/${id}`);
-      //.pipe(map(data => data['artists'].items));
   }
 }

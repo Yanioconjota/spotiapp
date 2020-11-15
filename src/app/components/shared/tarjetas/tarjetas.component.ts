@@ -14,11 +14,11 @@ export class TarjetasComponent {
   constructor(private router: Router) { }
 
   verArtista( item: any ) {
-    let artistaId: string;
+    let artistaId;
     if (item.type === 'artist') {
       artistaId = item.id;
     } else {
-      artistaId = item.id;
+      artistaId = item.artists[0].id;
     }
     this.router.navigate(['/artist', artistaId]);
   }
